@@ -23,18 +23,12 @@ module.exports = {
     /**
      * Create a new array with decoded data
      */
-    encoded.forEach((element, ind) => {
+    encoded.map((element, ind) => {
       if (ind % 2 === 0) {
-        uncompressed.push(new Array(element).fill(encoded[ind + 1]));
+        uncompressed.push(...[...Array(element).fill(encoded[ind + 1])]);
       }
     });
 
-    /**
-     * Create a new array with all sub-array elements concatenated into it recursively up to specified depth
-     * @param {array} arr
-     */
-    let flatArray = uncompressed.reduce((acc, value) => acc.concat(value), []);
-
-    return flatArray;
+    return uncompressed;
   }
 };
