@@ -1,0 +1,27 @@
+{
+  "name": "rle-data",
+  "version": "0.0.1",
+  "description": "Run-length encoding for JS",
+  "main": "index.js",
+  "scripts": {
+    "test": "jest --coverage",
+    "size": "size-limit"
+  },
+  "keywords": [
+    "RLE",
+    "run-length",
+    "binary",
+    "compression"
+  ],
+  "author": "Nik Shevchenko <shevchenko.nik@icloud.com>",
+  "license": "MIT",
+  "devDependencies": {
+    "@size-limit/preset-small-lib": "^2.2.0",
+    "jest": "^24.9.0"
+  },
+  "size-limit": [
+    {
+      "path": "index.js"
+    }
+  ]
+}
