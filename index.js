@@ -13,7 +13,11 @@ module.exports = {
       }
     }
 
+    /**
+     * Add a last pair
+     */
     encoding.push(count, previous);
+
     return encoding;
   },
 

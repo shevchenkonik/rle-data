@@ -1,9 +1,9 @@
 let RLe = require('../')
 
 it('RLE encodes', () => {
-  let encodedData = RLe.encode([0, 0, 0, 0, 0, 1]);
+  let encodedData = RLe.encode([0, 0, 0, 0, 0, 1, 0]);
 
-  expect(encodedData).toEqual([5, 0, 1, 1]);
+  expect(encodedData).toEqual([5, 0, 1, 1, 1, 0]);
 })
 
 it('RLE decodes', () => {

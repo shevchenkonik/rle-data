@@ -5,6 +5,7 @@
   "main": "index.js",
   "scripts": {
     "test": "jest --coverage",
+    "test:watch": "jest --watch",
     "size": "size-limit"
   },
   "keywords": [
