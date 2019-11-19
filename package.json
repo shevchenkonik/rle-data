@@ -15,6 +15,10 @@
     "compression"
   ],
   "author": "Nik Shevchenko <shevchenko.nik@icloud.com>",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/shevchenkonik/rle-data.git"
+  },
   "license": "MIT",
   "devDependencies": {
     "@size-limit/preset-small-lib": "^2.2.0",
