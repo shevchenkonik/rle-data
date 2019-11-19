@@ -1,6 +1,6 @@
 {
   "name": "rle-data",
-  "version": "0.0.2",
+  "version": "0.0.3",
   "description": "Run-length encoding for JS",
   "main": "index.js",
   "scripts": {
