@@ -1,7 +1,8 @@
 module.exports = {
   encode: function encode(arr) {
-    let encoding = [];
-    let previous, count, i;
+    let encoding = [],
+      previous,
+      count;
 
     for (count = 1, previous = arr[0], i = 1; i < arr.length; i++) {
       if (arr[i] !== previous) {
