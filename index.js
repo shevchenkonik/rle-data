@@ -30,7 +30,26 @@ module.exports = {
      */
     encoded.map((element, ind) => {
       if (ind % 2 === 0) {
-        uncompressed.push(...[...Array(element).fill(encoded[ind + 1])]);
+        /**
+         * ES6 solution but Internet Explorer doesn't support
+         */
+        uncompressed.push(...Array(element).fill(encoded[ind + 1]));
+
+        /**
+         * Polyfill for Internet Explorer
+         * @param {number} value
+         * @param {number} len
+         *
+          let es5CreateArr = (value, len) => {
+            let arr = [];
+
+            for (let i = 0; i < len; i++) {
+              arr.push(value);
+            }
+
+            return arr;
+          }
+         */
       }
     });
 
