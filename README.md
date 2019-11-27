@@ -1,6 +1,6 @@
 # Run-length encoding
 
-A tiny (117 bytes) binary run-length encoding (RLE) packer/unpacker
+A tiny (116 bytes) binary run-length encoding (RLE) packer/unpacker
 
 ## Encoding format
 
