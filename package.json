@@ -12,7 +12,8 @@
     "RLE",
     "run-length",
     "binary",
-    "compression"
+    "compression",
+    "run-length-encode"
   ],
   "author": "Nik Shevchenko <shevchenko.nik@icloud.com>",
   "repository": {
