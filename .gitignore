@@ -4,3 +4,5 @@ yarn.lock
 
 coverage/
 .cache
+
+.DS_Store
