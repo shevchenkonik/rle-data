@@ -1,17 +1,22 @@
+interface Data {
+  (data: number[]): number[];
+  map: any;
+}
+
 /**
  * Encode data
  * @param {array} arr
  */
-function encode(arr: number[]): number[] {
+function encode(data: Data) {
   let encoding: number[] = [];
-  let previous = arr[0];
+  let previous = data[0];
   let count = 1;
 
-  for (let i = 1; i < arr.length; i++) {
-    if (arr[i] !== previous) {
+  for (let i = 1; i < data.length; i++) {
+    if (data[i] !== previous) {
       encoding.push(count, previous);
       count = 1;
-      previous = arr[i];
+      previous = data[i];
     } else {
       count++;
     }
@@ -29,18 +34,18 @@ function encode(arr: number[]): number[] {
  * Decode data
  * @param {array} encoded
  */
-function decode(encoded: number[]): number[] {
+function decode(data: Data) {
   let uncompressed: number[] = [];
 
   /**
    * Create a new array with decoded data
    */
-  encoded.map((element, ind) => {
+  data.map((element: any, ind: number) => {
     if (ind % 2 === 0) {
       /**
        * ES6 solution but Internet Explorer doesn't support
        */
-      uncompressed.push(...Array(element).fill(encoded[ind + 1]));
+      uncompressed.push(...Array(element).fill(data[ind + 1]));
     }
   });
 
