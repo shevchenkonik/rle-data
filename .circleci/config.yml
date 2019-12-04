@@ -10,7 +10,6 @@ jobs:
     branches:
       only:
         - master
-        - /feature-.*/
     docker:
       # specify the version you desire here
       - image: circleci/node:7.10
@@ -44,4 +43,4 @@ jobs:
       - store_artifacts:
         path: coverage
       - codecov/upload:
-        file: {{ coverage_report_filepath }}
+        file: coverage-final.json
