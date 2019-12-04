@@ -3,6 +3,8 @@
 # Check https://circleci.com/docs/2.0/language-javascript/ for more details
 #
 version: 2.1
+orbs:
+  codecov: codecov/codecov@1.0.5
 jobs:
   build:
     branches:
@@ -39,11 +41,3 @@ jobs:
 
       # run tests!
       - run: npm run test:coverage
-      - store_artifacts:
-          path: ./coverage/clover.xml
-          prefix: tests
-      - store_artifacts:
-          path: coverage
-          prefix: coverage
-      - store_test_results:
-          path: ./coverage/clover.xml
