@@ -1,0 +1,58 @@
+interface Data {
+  (data: number[]): number[];
+  map: any;
+}
+
+/**
+ * Encode data
+ * @param {array} arr
+ */
+function encode(data: Data) {
+  let encoding: number[] = [];
+  let previous = data[0];
+  let count = 1;
+
+  for (let i = 1; i < data.length; i++) {
+    if (data[i] !== previous) {
+      encoding.push(count, previous);
+      count = 1;
+      previous = data[i];
+    } else {
+      count++;
+    }
+  }
+
+  /**
+   * Add a last pair
+   */
+  encoding.push(count, previous);
+
+  return encoding;
+}
+
+/**
+ * Decode data
+ * @param {array} encoded
+ */
+function decode(data: Data) {
+  let uncompressed: number[] = [];
+
+  /**
+   * Create a new array with decoded data
+   */
+  data.map((element: any, ind: number) => {
+    if (ind % 2 === 0) {
+      /**
+       * ES6 solution but Internet Explorer doesn't support
+       */
+      uncompressed.push(...Array(element).fill(data[ind + 1]));
+    }
+  });
+
+  return uncompressed;
+}
+
+module.exports = {
+  encode: encode,
+  decode: decode
+};

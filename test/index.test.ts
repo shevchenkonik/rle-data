@@ -1,4 +1,4 @@
-let RLe = require('../')
+let RLe = require('../src/')
 
 it('RLE encodes', () => {
   let encodedData = RLe.encode([0, 0, 0, 0, 0, 1, 0]);
