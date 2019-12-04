@@ -8,7 +8,7 @@
     "build": "tsc --declaration",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage",
+    "test:coverage": "jest --coverage && codecov",
     "size": "size-limit"
   },
   "keywords": [
@@ -29,6 +29,7 @@
     "@size-limit/preset-small-lib": "^2.2.0",
     "@types/jest": "^24.0.23",
     "@types/node": "^12.12.14",
+    "codecov": "^3.6.1",
     "jest": "^24.9.0",
     "jest-coverage-badges": "^1.1.2",
     "ts-jest": "^24.2.0",
