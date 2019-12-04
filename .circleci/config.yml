@@ -39,7 +39,7 @@ jobs:
 
       # run tests!
       - run: npm run test:coverage
-      # - store_artifacts:
-      #   path: coverage
-      # - codecov/upload:
-      #   file: coverage-final.json
+      - store_artifacts:
+        path: coverage
+      - codecov/upload:
+        file: coverage-final.json
