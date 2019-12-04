@@ -2,6 +2,8 @@
 
 A tiny (116 bytes) binary run-length encoding (RLE) packer/unpacker
 
+[![CircleCI](https://circleci.com/gh/shevchenkonik/rle-data.svg?style=shield)](https://circleci.com/gh/shevchenkonik/rle-data)
+
 ## Encoding format
 
 #### Incoming data
