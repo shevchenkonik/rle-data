@@ -43,9 +43,23 @@ function decode(data: Data) {
   data.map((element: any, ind: number) => {
     if (ind % 2 === 0) {
       /**
-       * ES6 solution but Internet Explorer doesn't support
+       * Polyfill
+       * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
        */
-      uncompressed.push(...Array(element).fill(data[ind + 1]));
+      if (!Array.prototype.fill) {
+        let fillPolyfill = (value: any, len: number) => {
+          for (let i = 0; i < len; i++) {
+            uncompressed.push(value);
+          }
+        };
+
+        fillPolyfill(data[ind + 1], element);
+      } else {
+        /**
+         * ES6 solution but Internet Explorer doesn't support
+         */
+        uncompressed.push(...Array(element).fill(data[ind + 1]));
+      }
     }
   });
 
