@@ -35,7 +35,14 @@ describe("Encode", () => {
 })
 
 describe("Decode", () => {
-  it('Numbers', () => {
+  it("Numbers", () => {
+    let decodedData = RLe.decode(data.toDecode.numbers);
+
+    expect(decodedData).toEqual(data.toEncode.numbers);
+  })
+
+  it("Numbers polyfill", () => {
+    Array.prototype.fill = undefined;
     let decodedData = RLe.decode(data.toDecode.numbers);
 
     expect(decodedData).toEqual(data.toEncode.numbers);

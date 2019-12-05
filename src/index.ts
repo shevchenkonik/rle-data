@@ -47,7 +47,7 @@ function decode(data: Data) {
        * https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array/fill
        */
       if (!Array.prototype.fill) {
-        let fillPolyfill = (value: any, len: number) => {
+        function fillPolyfill (value: any, len: number) {
           for (let i = 0; i < len; i++) {
             uncompressed.push(value);
           }
