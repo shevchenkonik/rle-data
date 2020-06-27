@@ -4,7 +4,7 @@ A tiny (150 bytes) binary run-length encoding (RLE) packer/unpacker
 
 [![CircleCI](https://circleci.com/gh/shevchenkonik/rle-data.svg?style=shield)](https://circleci.com/gh/shevchenkonik/rle-data) [![codecov](https://codecov.io/gh/shevchenkonik/rle-data/branch/master/graph/badge.svg)](https://codecov.io/gh/shevchenkonik/rle-data) ![GitHub](https://img.shields.io/github/license/shevchenkonik/rle-data)
 
-The article about Run Length Algorithm is [here](https://shevchenkonik.com/posts/2019/rle/). My usecase of `rle-data` is create binary matrix for image segmentation (Canvas) to reduce data size.
+The article about Run Length Algorithm is [here](https://shevchenkonik.com/blog/rle). My usecase of `rle-data` is create binary matrix for image segmentation (Canvas) to reduce data size.
 
 ## Encoding format
 
