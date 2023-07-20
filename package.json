@@ -8,7 +8,7 @@
     "build": "tsc --declaration",
     "test": "jest",
     "test:watch": "jest --watch",
-    "test:coverage": "jest --coverage && codecov",
+    "test:coverage": "jest --coverage",
     "size": "size-limit"
   },
   "keywords": [
