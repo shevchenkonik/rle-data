@@ -5,7 +5,7 @@ interface Data {
 
 /**
  * Encode data
- * @param {array} arr
+ * @param data
  */
 function encode(data: Data) {
   let encoding: number[] = [];
@@ -32,7 +32,7 @@ function encode(data: Data) {
 
 /**
  * Decode data
- * @param {array} encoded
+ * @param data
  */
 function decode(data: Data) {
   let uncompressed: number[] = [];
@@ -51,7 +51,7 @@ function decode(data: Data) {
           for (let i = 0; i < len; i++) {
             uncompressed.push(value);
           }
-        };
+        }
 
         fillPolyfill(data[ind + 1], element);
       } else {
